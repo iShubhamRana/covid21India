@@ -16,7 +16,7 @@ html{
 #carouselExampleCaptions img{
     height: 30rem;
 }
-.important-links img{
+.card img{
      height:12rem ;
 }
 .case-displayer p{
@@ -54,4 +54,10 @@ width:15rem;
 }
 .check-btn{
   margin-top: -0.3rem;
+}
+.hamburger{
+  position: absolute;
+  height:30px;
+  width: 30px;
+  
 }

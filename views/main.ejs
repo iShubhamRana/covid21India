@@ -2,9 +2,12 @@
 
 <nav class="navbar navbar-expand-md d-flex  mb-3 navbar-primary bg-light">
     <div class="container-fluid">
-    <a class="navbar-brand px-5 ">Covid21India</a>
+    <a class="navbar-brand px-3">Covid21India</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon text-center d-flex justify-content-center">
+        <img src="/images/hamburger2.png" class="hamburger" >
+      </span>
+      
     </button>
    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ms-auto ">
@@ -67,56 +70,71 @@
 <section  class="container mb-5">
   <h1 class="main-heading text-center border bg-light py-2 mb-3">Important Links</h1>
   
-
-  <div class="d-flex justify-content-between important-links flex-wrap">
-  <div class="card" style="width: 20rem;">
-    <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row ">
+  <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
+    <div class="card mb-3" style="width: 20rem;">
+      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
   </div>
-  <div class="card" style="width: 20rem;">
-    <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
+    <div class="card mb-3" style="width: 20rem;">
+      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
   </div>
-  <div class="card" style="width: 20rem;">
-    <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
+    <div class="card mb-3" style="width: 20rem;">
+      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
     </div>
   </div>
-  </div>  
+</div>
+  
 </section>
 <!-- ////////////////////////////section for covid cases////////////////////////// -->
 <section class="container"> 
   <h1 class="main-heading text-center border bg-light py-2 mb-3">Covid Cases</h1>
-  <div class="d-flex justify-content-around">
-     <div class="border case-displayer text-center ">
-       <h2 class="border-bottom">Confirmed</h2>
-      <p> <%=Confirmed %></p>
-     </div>
-     <div class="border case-displayer text-center ">
-      <h2 class="border-bottom">Recovered</h2>
-     <p> <%=Recovered %></p>
+  <div class="row">
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
+      <div class="border case-displayer text-center ">
+        <h2 class="border-bottom">Confirmed</h2>
+       <p> <%=Confirmed %></p>
+      </div>
     </div>
-     <div class="border case-displayer text-center ">
-       <h2 class="border-bottom">Active</h2>
-      <p> <%=Active %></p>
-     </div>
-     <div class="border case-displayer text-center ">
-       <h2 class="border-bottom">Deaths</h2>
-      <p> <%=Deaths %> </p>
-     </div>
-     
-   </div>
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
+      <div class="border case-displayer text-center ">
+        <h2 class="border-bottom">Recovered</h2>
+       <p> <%=Recovered %></p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
+      <div class="border case-displayer text-center ">
+        <h2 class="border-bottom">Active</h2>
+       <p> <%=Active %></p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
+      <div class="border case-displayer text-center ">
+        <h2 class="border-bottom">Deaths</h2>
+       <p> <%=Deaths %> </p>
+      </div>
+    </div>
+
+  </div>
+  
 
 </section>
 
