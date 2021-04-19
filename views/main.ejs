@@ -11,7 +11,7 @@
     </button>
    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ms-auto ">
-      <li class="nav-item px-3"><a class="nav-link " href="/">Home</a></li>
+      <li class="nav-item px-3 border border-primary"><a class="nav-link " href="/">Home</a></li>
       <li class="nav-item px-3"><a class="nav-link" href="/searchDonors">Search Donors</a></li>
       <li class="nav-item px-3"><a class="nav-link" href="/becomeDonor">Become Donor</a></li>
       <li class="nav-item px-3"><a class="nav-link" href="/aboutUs">About Us</a></li>
@@ -34,24 +34,24 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://source.unsplash.com/user/erondu/1600x900" class="d-block w-100" alt="...">
+        <img src="/images/slider2.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <h5></h5>
+          <p></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://source.unsplash.com/user/erondu/1600x900" class="d-block w-100" alt="...">
+        <img src="/images/stayhome.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5></h5>
+          <p></p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://source.unsplash.com/user/erondu/1600x900" class="d-block w-100" alt="...">
+        <img src="/images/COVID21INDIA.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h5></h5>
+          <p></p>
         </div>
       </div>
     </div>
@@ -67,37 +67,38 @@
 </section>
 
 <!-- /////////////////////////////////////section for card/////////////////////////// -->
-<section  class="container mb-5">
+<section  class="container mb-4">
   <h1 class="main-heading text-center border bg-light py-2 mb-3">Important Links</h1>
   
 <div class="row ">
   <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
     <div class="card mb-3" style="width: 20rem;">
-      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <img src="/images/plasma.jfif" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Become a Donor</h5>
+        <p class="card-text">Add yourself to the Plasma donor list and help save someone's life and family Click on the button below
+        </p>
+        <a href="/becomeDonor" class="btn btn-primary">Click Here</a>
       </div>
     </div>
   </div>
   <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
     <div class="card mb-3" style="width: 20rem;">
-      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <img src="/images/PM-CARES.jpg" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Donate to PMNRF</h5>
+        <p class="card-text">Donate to Prime Minister's National Relief Fund. All contributions towards PMNRF are exempt from Income Tax</p>
+        <a href="https://pmnrf.gov.in/en/" class="btn btn-primary" target='_blank'>Click Here</a>
       </div>
     </div>
   </div>
   <div class="col-lg-4 col-xxl-4 col col-md-12 col-sm-12 d-flex justify-content-center">
     <div class="card mb-3" style="width: 20rem;">
-      <img src="https://source.unsplash.com/random" class="card-img-top img-fluid" alt="...">
+      <img src="/images/download.jfif" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">WHO guidelines</h5>
+        <p class="card-text">A WHO guideline is  developed by WHO containing recommendations for clinical practice or public health policy.</p>
+        <a href="https://www.who.int/maternal_child_adolescent/guidelines/about-guidelines/en/" target='_blank' class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -105,31 +106,32 @@
   
 </section>
 <!-- ////////////////////////////section for covid cases////////////////////////// -->
-<section class="container"> 
-  <h1 class="main-heading text-center border bg-light py-2 mb-3">Covid Cases</h1>
+<section class="container text-center"> 
+  <h1 class="main-heading text-center border bg-light py-2 mb-2">Covid Cases</h1>
+  <h5 class="text-center mb-4">(Updated on <%= Date %>)</h5>
   <div class="row">
     <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
-      <div class="border case-displayer text-center ">
-        <h2 class="border-bottom">Confirmed</h2>
-       <p> <%=Confirmed %></p>
+      <div class="border border-danger case-displayer text-center text-danger Confirmed">
+        <h2 class="border-bottom border-danger">Confirmed</h2>
+       <p class=" mx-auto"> <%=Confirmed %></p>
       </div>
     </div>
     <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
-      <div class="border case-displayer text-center ">
-        <h2 class="border-bottom">Recovered</h2>
-       <p> <%=Recovered %></p>
+      <div class="border border-success case-displayer text-center text-success Recovered ">
+        <h2 class="border-bottom border-success">Recovered</h2>
+       <p class=" mx-auto"> <%=Recovered %></p>
       </div>
     </div>
-    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
-      <div class="border case-displayer text-center ">
-        <h2 class="border-bottom">Active</h2>
-       <p> <%=Active %></p>
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12 ">
+      <div class="border border-primary case-displayer text-center text-primary Active">
+        <h2 class="border-bottom border-primary">Active</h2>
+       <p class='text-center  mx-auto'> <%=Active %></p>
       </div>
     </div>
-    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12">
-      <div class="border case-displayer text-center ">
-        <h2 class="border-bottom">Deaths</h2>
-       <p> <%=Deaths %> </p>
+    <div class="col-lg-3 col-xxl-3 col-md-6 col-sm-12 text-secondary">
+      <div class="border border-secondary case-displayer text-center Death">
+        <h2 class="border-bottom border-secondary">Deaths</h2>
+       <p class="mx-auto"> <%=Deaths %> </p>
       </div>
     </div>
 

@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 <nav class="navbar navbar-expand-md d-flex  mb-3 navbar-primary bg-light">
     <div class="container-fluid">
-    <a class="navbar-brand px-5 ">Covid21India</a>
+    <a class="navbar-brand px-3 ">Covid21India</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon text-center d-flex justify-content-center">
         <img src="/images/hamburger2.png" class="hamburger" >
@@ -12,7 +12,7 @@
       <li class="nav-item px-3"><a class="nav-link " href="/">Home</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="/searchDonors">Search Donors</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="/becomeDonor">Become Donor</a></li>
-        <li class="nav-item px-3"><a class="nav-link" href="/aboutUs">About Us</a></li>
+        <li class="nav-item px-3 border border-primary"><a class="nav-link" href="/aboutUs">About Us</a></li>
     </ul>
   </div>
 </div>
@@ -20,7 +20,24 @@
 
 
 <section>
-    About page
+  <div class="container">
+     <h1 class="bg-light px-3">About Us</h1> 
+    <div class="row">
+    <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 fs-4">
+        The project is started by two NSUT students <span class="text-primary">'Shubham Rana'</span> and <span class="text-primary">'Abhimanyu Ahuja'</span>.
+        On seeing a number messages being shared on social media sharing the details of potential plasma donors, we decided to make this small website which may help someone. <br>
+        The data for covid cases is from API<br>
+        <span class="text-primary">https://api.covid19api.com/dayone/country/india </span> by Postman.
+        You can make contributions to the project on github repositoy link: <br>
+        <span><a href="#">Link here</a></span>
+
+        
+     </div>
+    <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 text-center">
+        <img src='/images/about.png' class="about" >
+     </div>
+    </div> 
+   </div>
 </section>
 
 <%- include('partials/footer')  -%>

@@ -276,7 +276,7 @@ app.route('/searchDonors')
 
 app.route('/aboutUs')
 .get((req,res)=>{
-    res.send('about page');  
+    res.render('about');  
 })
 
 let port = process.env.PORT;
