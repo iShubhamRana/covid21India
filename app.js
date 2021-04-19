@@ -13,7 +13,7 @@ app.set('view engine' , 'ejs');
 let deaths , recovered , active , confirmed , date;
 
 
-mongoose.connect('mongodb+srv://'+process.env.name+':' + process.env.password+'@cluster0.kzsaf.mongodb.net/donorDB', {useNewUrlParser:true , useUnifiedTopology:true});
+mongoose.connect('mongodb+srv://admin-shubham:rana2001shubham@cluster0.kzsaf.mongodb.net/donorDB', {useNewUrlParser:true , useUnifiedTopology:true});
 
 
 const states = 
