@@ -245,10 +245,6 @@ app.route('/searchDonors')
     })
 })
 .post((req,res)=>{
-    const checkState = ()=>{
-        if (req.body.State !='')  return (`State:req.body.State}`);
-        else return ('');
-    }
     Donor.find({} , (err,result)=>{
         if(!err){
 
@@ -273,7 +269,7 @@ app.route('/searchDonors')
         else{
         }
       })
-})
+});
 
 
 
