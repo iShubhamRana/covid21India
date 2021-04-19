@@ -23,7 +23,43 @@
   <h1 class="text-center mb-3  bg-light">Find <span class="text-danger">Plasma Donors</span></h1>
   <div class="container-fluid px-3">
     <div class="row">
-     
+      <div class="col-lg-3 col-xxl-3 col-md-12 col-sm-12 d-flex justify-content-center my-3" >
+          <form class="filter border py-3 px-3 bg-light" action="/searchDonors" method="POST" >
+            <h3 class="text-danger">Filters:</h3>
+             <div class="mb-3">
+                <label for="donorState" class="form-label">State/UT</label>
+                  <select name="State" id="donorState" >
+                    <option hidden selected value="">Select </option>
+                    <% states.forEach((state)=>{ %>
+                      <option value=<%=state.key %> ><%= state.name %></option>
+                    <%  })                      %>
+                    
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorRecoveryPeriod" class="form-label">Period after recovery from covid</label>
+                  <select name="Period" id="donorRecoveryPeriod">
+                    <option hidden selected value=""> Select </option>
+                    <% recoveryPeriod.forEach((period)=>{ %>
+                      <option value=<%=period.name %> ><%= period.name %></option>
+                    <%  })      %>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorBloodGroup" class="form-label">Blood group</label>
+                  <select name="Group" id="donorBloodGroup">
+                    <option hidden selected value="">Select</option>
+                <%  bloodGroups.forEach((group)=>{                %>
+                      <option value=<%=group %> > <%=group%> </option> 
+                <%    }) %>
+                  </select>
+              </div>
+              
+              <button class="btn btn-outline-danger" type="submit">Apply</button>
+
+          </form>
+      </div>
+
    <!-- info case-displayer -->
       <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 d-flex justify-content-center my-2 ">
         <div class="table-responsive">
