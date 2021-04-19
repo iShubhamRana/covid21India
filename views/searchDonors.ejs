@@ -1,10 +1,12 @@
 <%- include('partials/header')  -%>
 
 <nav class="navbar navbar-expand-md d-flex  mb-3 navbar-primary bg-light">
-    <div class="container-fluid">
-    <a class="navbar-brand px-5 ">Covid21India</a>
+    <div class="container-fluid ">
+    <a class="navbar-brand px-3 ">Covid21India</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon text-center d-flex justify-content-center">
+        <img src="/images/hamburger2.png" class="hamburger" >
+      </span>      
     </button>
    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ms-auto ">
@@ -18,7 +20,88 @@
 </nav>
 
 <section>
-  Search page
+  <h1 class="text-center mb-3  bg-light">Find <span class="text-danger">Plasma Donors</span></h1>
+  <div class="container-fluid px-3">
+    <div class="row">
+      <div class="col-lg-3 col-xxl-3 col-md-12 col-sm-12 d-flex justify-content-center my-3" >
+          <form class="filter border py-3 px-3 bg-light" action="/searchDonors" method="POST" >
+            <h3 class="text-danger">Filters:</h3>
+             <div class="mb-3">
+                <label for="donorState" class="form-label">State/UT</label>
+                  <select name="State" id="donorState" >
+                    <option hidden selected value="">Select </option>
+                    <% states.forEach((state)=>{ %>
+                      <option value=<%=state.key %> ><%= state.name %></option>
+                    <%  })                      %>
+                    
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorRecoveryPeriod" class="form-label">Period after recovery from covid</label>
+                  <select name="Period" id="donorRecoveryPeriod">
+                    <option hidden selected value=""> Select </option>
+                    <% recoveryPeriod.forEach((period)=>{ %>
+                      <option value=<%=period.name %> ><%= period.name %></option>
+                    <%  })      %>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorBloodGroup" class="form-label">Blood group</label>
+                  <select name="Group" id="donorBloodGroup">
+                    <option hidden selected value="">Select</option>
+                <%  bloodGroups.forEach((group)=>{                %>
+                      <option value=<%=group %> > <%=group%> </option> 
+                <%    }) %>
+                  </select>
+              </div>
+              
+              <button class="btn btn-outline-danger" type="submit">Apply</button>
+
+          </form>
+      </div>
+
+   <!-- info case-displayer -->
+      <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 d-flex justify-content-center my-2 ">
+        <div class="table-responsive">
+        <table class="table ">
+          <thead class="border bg-info">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Group</th>
+              <th scope="col">Period</th>
+              <th scope="col">Age</th>
+              <th scope="col">State</th>
+            </tr>
+          </thead>
+          <tbody>
+      <% donorList.forEach((element)=>{   %>
+        <tr class="border bg-light">
+          
+          <td><%= element.Name %></td>
+          <td><%= element.Phone %></td>
+          <td><%= element.Group %></td>
+          <td><%= element.Period %></td>
+          <td><%= element.Age %></td>
+       <%   states.forEach((e)=>{   %>
+          <%  if(e.key === element.State){    %>
+             <td> <%= e.name    %></td>
+             <%  }  %>
+             <%}) %>
+            </tr>
+      <% })     %>
+    
+            
+            
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <div class="col-lg-3 col-xxl-3 col-md-12 col-sm-12 d-flex justify-content-center">
+        <img src="/images/bloodHeart.png"  class="bloodHeart" >
+      </div>
+    </div>
+  </div>
 </section>
 
 

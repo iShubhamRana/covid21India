@@ -236,7 +236,43 @@ app.route('/becomeDonor')
 
 app.route('/searchDonors')
 .get((req,res)=>{
-    res.render('searchDonors');
+    Donor.find({} , (err,result)=>{
+      if(!err){
+        res.render('searchDonors' , {donorList:result,states: states , recoveryPeriod: recoveryPeriod , bloodGroups: bloodGroups });
+      }
+      else{
+      }
+    })
+})
+.post((req,res)=>{
+    const checkState = ()=>{
+        if (req.body.State !='')  return (`State:req.body.State}`);
+        else return ('');
+    }
+    Donor.find({} , (err,result)=>{
+        if(!err){
+
+            if(req.body.State != ''){
+                result=result.filter((e)=>{
+                    return (e.State === req.body.State)
+                })
+            }
+            if(req.body.Period != ''){
+                result=result.filter((e)=>{
+                    return (e.Period === req.body.Period)
+                })
+            }
+            if(req.body.Group != ''){
+                result=result.filter((e)=>{
+                    return (e.Group === req.body.Group)
+                })
+            }
+            res.render('searchDonors' , {donorList:result,states: states , recoveryPeriod: recoveryPeriod , bloodGroups: bloodGroups });
+
+        }
+        else{
+        }
+      })
 })
 
 
