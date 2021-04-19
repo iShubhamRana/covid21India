@@ -1,0 +1,111 @@
+<%- include('partials/header')  -%>
+
+<nav class="navbar navbar-expand-md d-flex  mb-3 navbar-primary bg-light">
+    <div class="container-fluid">
+    <a class="navbar-brand px-5 ">Covid21India</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ms-auto ">
+      <li class="nav-item px-3"><a class="nav-link " href="/">Home</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="/searchDonors">Search Donors</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="/becomeDonor">Become Donor</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="/aboutUs">About Us</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+<% if (success===1){ %>
+  <div class="alert alert-success" role="alert">
+      Thank you!! You have successfully added yourself to the donor list.
+  </div>
+  <% } %>
+
+<!-- /////////////////////////////form /////////////////////////// -->
+
+<section class="form-section container">
+  
+    <h1 class="">Donate plasma,<span class="text-danger">Save lives</span></h1>
+
+    <div class="d-flex mb-3">
+    <h5>You are <span class="text-danger" >Ineligible</span> if you  have &nbsp;</h5>
+
+    </div> 
+    <div class="alert alert-warning" role="alert">
+     
+      <p class=" ">1. &nbsp;&nbsp; Weight less than 50 kg</p>
+      <p class="">2.  &nbsp;&nbsp;  Females who have ever been pregnant</p>
+      <p class="">3.  &nbsp;&nbsp;  Diabetic on insulin</p>
+      <p class="">4.  &nbsp;&nbsp;  B.P more than 140 and diastolic less than 60 or more than 90</p>
+      <p class="">5.  &nbsp;&nbsp;  Cancer Survivor</p>
+      <p class="">6.  &nbsp;&nbsp;  Chronic kidney/heart/lung or liver disease.</p>
+      <p class="">7.  &nbsp;&nbsp; Uncontrolled diabetes or hypertension</p>
+      <p class="">8.  &nbsp;&nbsp; Age 18 to 60 years</p>
+    </div>
+
+    <div class='container' >
+      <div class="row">
+        <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 border border-3 border-info px-3 py-4">
+        <h5 class="">Please check the eligibility citeria above</h5> 
+          
+        <form action="/becomeDonor" method="POST" >
+             <div class="mb-3">
+                <label for="donorName" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="donorName" placeholder="Enter fullname"  required name="Name">                
+              </div>
+             <div class="mb-3">
+                <label for="donorPhone" class="form-label">Phone</label>
+                            
+                <input type="tel" id="donorPhone" class="form-control" name="Phone" placeholder="9999999999" pattern="[1-9]{1}[0-9]{9}" required>
+              </div>
+              <div class="mb-3">
+                <label for="donorState" class="form-label">State/UT</label>
+                  <select name="State" id="donorState" required  >
+                    <option hidden selected value="">Select </option>
+                    <% states.forEach((state)=>{ %>
+                      <option value=<%=state.key %> ><%= state.name %></option>
+                    <%  })                      %>
+                    
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorRecoveryPeriod" class="form-label">Period after recovery from covid</label>
+                  <select name="Period" id="donorRecoveryPeriod" required>
+                    <option hidden selected value=""> Select </option>
+                    <% recoveryPeriod.forEach((period)=>{ %>
+                      <option value=<%=period.name %> ><%= period.name %></option>
+                    <%  })                      %>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="donorBloodGroup" class="form-label">Blood group</label>
+                  <select name="Group" id="donorBloodGroup" required>
+                    <option hidden selected value="">Select</option>
+                <%  bloodGroups.forEach((group)=>{                %>
+                      <option value=<%=group %> > <%=group%> </option> 
+                <%    }) %>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="Age" class="form-label">Age</label>
+                  <input class="form-control"  type="number" placeholder="Enter Age (18-60) " name="Age" id="Age">
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+      </div>
+      <div class="col-lg-6 col-xxl-6 col-md-12 col-sm-12 py-4 text-center">
+          <img src="/images/donorpage.png" class="img-fluid donor-img" >
+      </div>
+    
+    </div>
+  </div>
+  
+
+</section>
+
+
+
+
+
+<%- include('partials/footer')  -%>

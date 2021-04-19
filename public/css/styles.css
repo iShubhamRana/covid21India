@@ -1,0 +1,57 @@
+
+html{
+    font-size:100% ;
+  }
+  @media ( max-width:990px){
+    html{
+      font-size: 95%;
+    }
+  }
+  @media  (max-width:768px){
+    html{
+      font-size: 90%;
+    }
+
+  }
+#carouselExampleCaptions img{
+    height: 30rem;
+}
+.important-links img{
+     height:12rem ;
+}
+.case-displayer p{
+width:15rem;
+
+}
+.case-displayer p{
+     font-size:2rem ;
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+}
+.form-section img{
+  padding-left: 5rem;
+  height:25rem;
+  width:25rem;
+  padding: 0px;
+  animation: shubham 3s linear infinite;
+  position: relative;
+}
+@keyframes shubham{
+  0%{
+     bottom: 0;
+  }
+  25%{
+    bottom: 1.5rem;
+  }
+  75%{
+    bottom: -1.5rem;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+.check-btn{
+  margin-top: -0.3rem;
+}
