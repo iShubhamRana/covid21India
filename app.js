@@ -274,7 +274,7 @@ app.route('/searchDonors')
 
 
 
-app.route('/aboutUs')
+app.route('/resources')
 .get((req,res)=>{
     res.render('about');  
 })
